@@ -1,0 +1,8 @@
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\Timezone Plus.exe
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\Timezone Plus.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\Timezone Plus.deps.json
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\Timezone Plus.runtimeconfig.json
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\Timezone Plus.pdb
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\Newtonsoft.Json.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\ReaLTaiizor.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\publish\win-x64\RestSharp.dll

@@ -1,0 +1,8 @@
+C:\Users\Superman\Desktop\test\Timezone Plus.exe
+C:\Users\Superman\Desktop\test\Timezone Plus.dll
+C:\Users\Superman\Desktop\test\Timezone Plus.deps.json
+C:\Users\Superman\Desktop\test\Timezone Plus.runtimeconfig.json
+C:\Users\Superman\Desktop\test\Timezone Plus.pdb
+C:\Users\Superman\Desktop\test\Newtonsoft.Json.dll
+C:\Users\Superman\Desktop\test\ReaLTaiizor.dll
+C:\Users\Superman\Desktop\test\RestSharp.dll

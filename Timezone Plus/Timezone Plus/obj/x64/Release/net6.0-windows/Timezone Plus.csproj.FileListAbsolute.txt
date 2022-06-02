@@ -19,3 +19,4 @@ D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\x64\Release\net6.0-windows\refi
 D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\x64\Release\net6.0-windows\Timezone Plus.pdb
 D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\x64\Release\net6.0-windows\Timezone Plus.genruntimeconfig.cache
 D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\x64\Release\net6.0-windows\ref\Timezone Plus.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\x64\Release\net6.0-windows\Timezone Plus.dll.manifest

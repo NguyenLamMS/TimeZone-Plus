@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.VisualBasic;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace Timezone_Plus
 {
@@ -167,12 +169,20 @@ namespace Timezone_Plus
         {
             InitializeComponent();
             _controller = new IPController();
-            readFileJson();
+            readFileJsonAsync();
         }
 
-        public void readFileJson()
+        public async Task readFileJsonAsync()
         {
-            JsonTimeZone = JArray.Parse(File.ReadAllText("timezones.json"));
+            try
+            {
+                string jsonStr = Encoding.UTF8.GetString(Resource.timezones);
+                JsonTimeZone = JArray.Parse(jsonStr);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Not file timezones.json");
+            }
         }
         public void getIp()
         {
@@ -216,7 +226,7 @@ namespace Timezone_Plus
         }
         public void changerTimeZone()
         {
-            getIp();
+            getIp(); 
             if (!String.IsNullOrEmpty(_controller.timezone))
             {
                 foreach (JObject json in JsonTimeZone)
@@ -228,8 +238,8 @@ namespace Timezone_Plus
                         {
                             string valueTime = json["value"].ToString();
                             foreach (KeyValuePair<String, String> item in timezoneWindowns)
-                            {
-                                if (item.Value.Contains(valueTime))
+                            {                              
+                                if (item.Value.Replace(" ", "").Contains(valueTime.Replace(" ", "")))
                                 {
                                     SetSystemTimeZone(valueTime);
                                 }

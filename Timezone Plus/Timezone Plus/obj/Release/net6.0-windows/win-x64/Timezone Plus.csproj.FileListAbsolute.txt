@@ -1,0 +1,21 @@
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\Timezone Plus.deps.json
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\Timezone Plus.runtimeconfig.json
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.csproj.AssemblyReference.cache
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone_Plus.Home.resources
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.csproj.GenerateResource.cache
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.GeneratedMSBuildEditorConfig.editorconfig
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.AssemblyInfoInputs.cache
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.AssemblyInfo.cs
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.csproj.CoreCompileInputs.cache
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.genruntimeconfig.cache
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\refint\Timezone Plus.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.pdb
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\Timezone Plus.exe
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\Timezone Plus.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\Timezone Plus.pdb
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\Newtonsoft.Json.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\ReaLTaiizor.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\bin\Release\net6.0-windows\win-x64\RestSharp.dll
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\Timezone Plus.csproj.CopyComplete
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\win-x64\ref\Timezone Plus.dll
