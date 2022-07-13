@@ -16,6 +16,7 @@ namespace Timezone_Plus
         public String proxy_detection;
         public String city;
         public String region;
+        public int offset;
         public String hostname;
         public String district;
         public String zipcode;

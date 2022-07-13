@@ -115,7 +115,7 @@
             this.lostCancelButton1.Name = "lostCancelButton1";
             this.lostCancelButton1.Size = new System.Drawing.Size(143, 40);
             this.lostCancelButton1.TabIndex = 1;
-            this.lostCancelButton1.Text = "Kiểm tra IP nâng cao";
+            this.lostCancelButton1.Text = "Xoá chuỗi";
             this.lostCancelButton1.Click += new System.EventHandler(this.lostCancelButton1_Click);
             // 
             // lostAcceptButton2

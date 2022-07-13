@@ -20,3 +20,4 @@ D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\Timezone
 D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\Timezone Plus.genruntimeconfig.cache
 D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\ref\Timezone Plus.dll
 D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\Timezone_Plus.Resource.resources
+D:\Timezone Plus\Timezone Plus\Timezone Plus\obj\Release\net6.0-windows\Timezone_Plus.Input.resources

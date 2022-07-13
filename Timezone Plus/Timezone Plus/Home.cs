@@ -59,7 +59,7 @@ namespace Timezone_Plus
             {"(UTC-04:00) Santiago", "Pacific SA Standard Time"},
             {"(UTC-03:30) Newfoundland", "Newfoundland Standard Time"},
             {"(UTC-03:00) Araguaina", "Tocantins Standard Time"},
-            {"(UTC-03:00) Brasilia", "E.South America Standard Time"},
+            {"(UTC-03:00) Brasilia", "E. South America Standard Time"},
             {"(UTC-03:00) Cayenne, Fortaleza", "SA Eastern Standard Time"},
             {"(UTC-03:00) City of Buenos Aires", "Argentina Standard Time"},
             {"(UTC-03:00) Greenland", "Greenland Standard Time"},
@@ -75,7 +75,7 @@ namespace Timezone_Plus
             {"(UTC+00:00) Monrovia, Reykjavik", "Greenwich Standard Time"},
             {"(UTC+00:00) Sao Tome", "Sao Tome Standard Time"},
             {"(UTC+01:00) Casablanca", "Morocco Standard Time"},
-            {"(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna", "W.Europe Standard Time"},
+            {"(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna", "W. Europe Standard Time"},
             {"(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague", "Central Europe Standard Time"},
             {"(UTC+01:00) Brussels, Copenhagen, Madrid, Paris", "Romance Standard Time"},
             {"(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb", "Central European Standard Time"},
@@ -84,7 +84,7 @@ namespace Timezone_Plus
             {"(UTC+02:00) Athens, Bucharest", "GTB Standard Time"},
             {"(UTC+02:00) Beirut", "Middle East Standard Time"},
             {"(UTC+02:00) Cairo", "Egypt Standard Time"},
-            {"(UTC+02:00) Chisinau", "E.Europe Standard Time"},
+            {"(UTC+02:00) Chisinau", "E. Europe Standard Time"},
             {"(UTC+02:00) Damascus", "Syria Standard Time"},
             {"(UTC+02:00) Gaza, Hebron", "West Bank Standard Time"},
             {"(UTC+02:00) Harare, Pretoria", "South Africa Standard Time"},
@@ -99,8 +99,8 @@ namespace Timezone_Plus
             {"(UTC+03:00) Istanbul", "Turkey Standard Time"},
             {"(UTC+03:00) Kuwait, Riyadh", "Arab Standard Time"},
             {"(UTC+03:00) Minsk", "Belarus Standard Time"},
-            {"(UTC+03:00) Moscow, St.Petersburg", "Russian Standard Time"},
-            {"(UTC+03:00) Nairobi", "E.Africa Standard Time"},
+            {"(UTC+03:00) Moscow, St. Petersburg", "Russian Standard Time"},
+            {"(UTC+03:00) Nairobi", "E. Africa Standard Time"},
             {"(UTC+03:00) Volgograd", "Volgograd Standard Time"},
             {"(UTC+03:30) Tehran", "Iran Standard Time"},
             {"(UTC+04:00) Abu Dhabi, Muscat", "Arabian Standard Time"},
@@ -125,14 +125,14 @@ namespace Timezone_Plus
             {"(UTC+06:30) Yangon(Rangoon)", "Myanmar Standard Time"},
             {"(UTC+07:00) Bangkok, Hanoi, Jakarta", "SE Asia Standard Time"},
             {"(UTC+07:00) Barnaul, Gorno - Altaysk", "Altai Standard Time"},
-            {"(UTC+07:00) Hovd", "W.Mongolia Standard Time"},
+            {"(UTC+07:00) Hovd", "W. Mongolia Standard Time"},
             {"(UTC+07:00) Krasnoyarsk", "North Asia Standard Time"},
-            {"(UTC+07:00) Novosibirsk", "N.Central Asia Standard Time"},
+            {"(UTC+07:00) Novosibirsk", "N. Central Asia Standard Time"},
             {"(UTC+07:00) Tomsk", "Tomsk Standard Time"},
             {"(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi", "China Standard Time"},
             {"(UTC+08:00) Irkutsk", "North Asia East Standard Time"},
             {"(UTC+08:00) Kuala Lumpur, Singapore", "Singapore Standard Time"},
-            {"(UTC+08:00) Perth", "W.Australia Standard Time"},
+            {"(UTC+08:00) Perth", "W. Australia Standard Time"},
             {"(UTC+08:00) Taipei", "Taipei Standard Time"},
             {"(UTC+08:00) Ulaanbaatar", "Ulaanbaatar Standard Time"},
             {"(UTC+08:45) Eucla", "Aus Central W. Standard Time"},
@@ -141,9 +141,9 @@ namespace Timezone_Plus
             {"(UTC+09:00) Pyongyang", "North Korea Standard Time"},
             {"(UTC+09:00) Seoul", "Korea Standard Time"},
             {"(UTC+09:00) Yakutsk", "Yakutsk Standard Time"},
-            {"(UTC+09:30) Adelaide", "Cen.Australia Standard Time"},
+            {"(UTC+09:30) Adelaide", "Cen. Australia Standard Time"},
             {"(UTC+09:30) Darwin", "AUS Central Standard Time"},
-            {"(UTC+10:00) Brisbane", "E.Australia Standard Time"},
+            {"(UTC+10:00) Brisbane", "E. Australia Standard Time"},
             {"(UTC+10:00) Canberra, Melbourne, Sydney", "AUS Eastern Standard Time"},
             {"(UTC+10:00) Guam, Port Moresby", "West Pacific Standard Time"},
             {"(UTC+10:00) Hobart", "Tasmania Standard Time"},
@@ -219,6 +219,7 @@ namespace Timezone_Plus
                 _controller.longitude = json["lon"].ToString();
                 _controller.timezone = json["timezone"].ToString();
                 _controller.ips = json["isp"].ToString();              
+                _controller.offset = int.Parse(json["offset"].ToString());              
             }
             catch (Exception e) {
                 MessageBox.Show("Đã xảy ra lỗi");
@@ -236,12 +237,19 @@ namespace Timezone_Plus
                     {
                         if (utc.Contains(_controller.timezone))
                         {
-                            string valueTime = json["value"].ToString();
+                            string textTime = json["text"].ToString();                          
+                            string valueTime = json["value"].ToString();                             
                             foreach (KeyValuePair<String, String> item in timezoneWindowns)
-                            {                              
-                                if (item.Value.Replace(" ", "").Contains(valueTime.Replace(" ", "")))
+                            {
+                                if (item.Key.Replace(" ", "") == (textTime.Replace(" ", "")))
                                 {
-                                    SetSystemTimeZone(valueTime);
+                                    SetSystemTimeZone(item.Value);
+                                    return;                              
+                                }
+                                if (item.Value.Replace(" ", "") == (valueTime.Replace(" ", "")))
+                                {
+                                    SetSystemTimeZone(item.Value);
+                                    return;
                                 }
                             }
                         }
@@ -280,12 +288,8 @@ namespace Timezone_Plus
 
         private void lostCancelButton1_Click(object sender, EventArgs e)
         {
-            getIp();
-            var uri = "https://www.ipqualityscore.com/free-ip-lookup-proxy-vpn-test/lookup/" + _controller.ip;
-            var psi = new System.Diagnostics.ProcessStartInfo();
-            psi.UseShellExecute = true;
-            psi.FileName = uri;
-            System.Diagnostics.Process.Start(psi);
+           Input input = new Input();
+           input.Show();
         }
 
         public void getTimeFromTimeZone(string timezone)
